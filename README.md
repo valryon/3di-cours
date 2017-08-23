@@ -4,6 +4,8 @@
 
 # Sommaire
 
+- [0. Objectifs du cours](./0. introduction/chap00.md)
+
 ## Programmation C#
 
 ## Unity3D
