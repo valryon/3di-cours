@@ -4,33 +4,9 @@
 
 # Sommaire
 
-- [Objectifs du cours](0. introduction/chap0-0.md)
-
-## Programmation C#
-
-- [Hello World](1. programmation C#/chap1-0.md)
-- [Les variables](1. programmation C#/chap1-1.md)
-- [Les structures de contrôles (if, for, while)](1. programmation C#/chap1-2.md)
-- [Les fonctions](1. programmation C#/chap1-3.md)
-- [Tableaux et liste](1. programmation C#/chap1-4.md)
-- [Les fichiers](1. programmation C#/chap1-5.md)
-- [Interfaces graphiques (WinForms)](1. programmation C#/chap1-6.md)
-
-## Unity3D
-
-Idées :
-
-- Hello Unity3D
-- Composition d'une scène 2D non interactive
-- Premiers bouts de gameplay sans coder
-- Réalisation d'un minijeu 3D (toujours sans coder !)
-- Sons, particules: le juice
-- Animations
-
-## Scripts C# dans Unity3D
-
-Idées :
-
-- Premier scripts (frame, update, start, etc)
-- Inputs
-- Instantiate
+1. [Qui suis-je ? Pourquoi je suis là ?](0-introduction/)
+2. [Logique de code en PICO-8 (Lua)](1-logique de code/)
+3. [Programmation C# comme les vrais](2-programmation C#/)
+4. [Unity3D](3-Unity3D/)
+5. [Scripting C# dans Unity 3D](4-scripting C# dans Unity3D/)
+6. [Scripting C# dans Unreal Engine](5-scripting C# dans Unreal Engine/)
