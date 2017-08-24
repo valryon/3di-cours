@@ -102,7 +102,7 @@ Dans notre exemple, `pseudo` est une **chaîne de caractère** (**string** en an
 
 En Lua, les types sont assez simples. On ne fait pas exemple pas la différence entre les nombres entiers et les nombres à virgules.
 
-|| type | nom FR | exemples de valeurs |
+| type | nom FR | exemples de valeurs |
 |------|--------|----------------------------------------|
 | **boolean** | booléen | `false` (faux, 0) `true` (vrai, 1)  |
 | **number** | nombre | `0`, `1`, `-78.8`, `42.66` |
@@ -196,12 +196,12 @@ Ces comparaisons retournent une valeur **booléenne** : vrai (`true`) ou faux (`
 ## Correction
 
 ```lua
-cls()
+CLS()
 x=18
 y=21
-print("il fait faim",x,y)
+PRINT("il fait faim",x,y)
 y=y+8
-print("mais on est encore loin",x,y)
+PRINT("mais on est encore loin",x,y)
 y=y+8
-print("de l'heure du repas !",x,y)
+PRINT("de l'heure du repas !",x,y)
 ```
