@@ -1,8 +1,10 @@
-🇺🇸 🇬🇧: This is a french-only repository for my teaching material at [Laval 3di](http://www.laval3di.org/laval-3di.html)
+# Support de cours - Laval 3di
 
-🇫🇷 : Supports de cours pour la [licence 3di à l'UCO Laval](http://www.laval3di.org/laval-3di.html)
+Bases de la programmation avec PICO-8, découverte de Unity3D, Programmation C#
 
-# Sommaire
+Année : 2017-2018
+
+## Sommaire
 
 1. [Qui suis-je ? Pourquoi je suis là ?](./0-introduction/)
 2. [Logique de code](./1-logique de code/)
