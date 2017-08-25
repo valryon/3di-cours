@@ -83,7 +83,7 @@ Comme les opérations, il est possible de comparer des valeurs.
 
 Ces comparaisons retournent une valeur **booléenne** : vrai (`true`) ou faux (`false`).
 
-### Exercice
+### Exercice : dessin d'un carré
 
 1. Afficher un point à l'écran avec `PSET(X,Y,COLOR)`
 2. Afficher un carré de plusieurs points
@@ -100,7 +100,6 @@ END
 
 3. Ajouter un `IF` permettant de savoir si le joueur appuie sur le bouton 4 (`BTN(4)` touche C du clavier) et n'afficher le pixel que si la touche est appuyée
 
-
 #### Correction
 
 ```lua
@@ -113,6 +112,39 @@ FUNCTION _DRAW()
 	  PSET(63,64,8)
 	  PSET(64,64,8)
 	 END
+END
+```
+
+### Exercice : déplacement d'un carré
+
+1. Afficher un carré à l'écran comme précédemment
+2. Ajouter des variables `x` et `y` pour définir sa position à l'écran
+
+Dans une fonction `_UPDATE()`, similaire à `DRAW()` mais pour la logique et les inputs :
+
+3. Utiliser des `if` et `BTN(n)` (n étant un nombre entre 0 et 5) pour détecter l'appui sur les flèches
+4. Modifier la valeur de `x` et `y` dans ce `if` pour faire déplacer le carré à l'écran !
+
+#### Correction
+
+```lua
+X=64
+Y=64
+
+FUNCTION _UPDATE()
+  IF BTN(0) THEN X=X-1 END
+  IF BTN(1) THEN X=X+1 END
+  IF BTN(2) THEN Y=Y-1 END
+  IF BTN(3) THEN Y=Y+1 END
+END
+
+FUNCTION _DRAW()
+  CLS()
+
+  PSET(x-1,y-1,8)
+  PSET(x,y-1,8)
+  PSET(x-1,y,8)
+  PSET(x,y,8)
 END
 ```
 
