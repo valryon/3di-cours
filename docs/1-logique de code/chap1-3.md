@@ -131,3 +131,119 @@ END
 CLS()
 colorscreen(8)
 ```
+
+## Exercice : génération d'un fond étoilé
+
+1. Écrire la fonction `drawstar(x,y,col)` qui dessine une croix de pixels `+` à l'écran aux coordonnées `x` et `y` données et dans la couleur `col`
+2. Utiliser cette fonction plusieurs fois dans `_DRAW()`
+
+```lua
+function drawstar(x,y,col)
+	-- dessine un +
+	pset(x,y,col)
+	pset(x,y-1,col)
+	pset(x,y+1,col)
+	pset(x+1,y,col)
+	pset(x-1,y,col)
+end
+
+function _draw()
+	cls()
+	drawstar(64,64,7)
+	drawstar(32,50,7)
+	drawstar(78,18,7)
+end
+```
+
+3. Avec deux boucles `for` (une pour x, une pour y), remplir l'écran d'étoiles.
+Pour ne pas avoir un écran d'une seule et même couleur, ajoutez une condition : n'afficher une étoile que quand x et y sont modulos 4 `x % 4 == 0 AND y % 4 == 0`
+
+```lua
+function drawstar(x,y,col)
+	-- dessine un +
+	pset(x,y,col)
+	pset(x,y-1,col)
+	pset(x,y+1,col)
+	pset(x+1,y,col)
+	pset(x-1,y,col)
+end
+
+cls()
+
+for x=1,128 do
+	for y=1,128 do
+		-- tous les 4 pixels
+		if x%4==0 and y%4==0 then
+			-- affiche une etoile
+			drawstar(x,y,7)
+		end
+	end
+end
+```
+
+C'est rigolo mais pas très naturel.
+
+4. Modifiez la condition pour n'afficher une étoile que si un nombre aléatoire entre 0 et 1 (obtenu avec `RND(1)`) est plus grand que 0.99.
+
+```lua
+function drawstar(x,y,col)
+	-- dessine un +
+	pset(x,y,col)
+	pset(x,y-1,col)
+	pset(x,y+1,col)
+	pset(x+1,y,col)
+	pset(x-1,y,col)
+end
+
+cls()
+
+for x=1,128 do
+	for y=1,128 do
+
+		if rnd(1)>0.99 then
+			drawstar(x,y,7)
+		end
+	end
+end
+```
+
+5. Déplacer le code d'affichage du fond étoilé dans une fonction `drawstarground` qui prend en paramètre une couleur `col`
+
+6. Appeler plusieurs fois cette fonction avec des couleurs différentes. Rappel, les couleurs :
+
+![Couleurs](https://neko250.github.io/pico8-api/img/colors.png)
+
+7. Ajoutez un paramètre `t` (comme *threshold*) pour définir le seuil du `RND` à dépasser (notre `0.99`).
+
+8. Modifier les appels pour avoir des décors plus ou moins fournis selon la profondeur et ajouter de la couleur
+
+```lua
+-- dessine un +
+function drawstar(x,y,col)
+	pset(x,y,col)
+	pset(x,y-1,col)
+	pset(x,y+1,col)
+	pset(x+1,y,col)
+	pset(x-1,y,col)
+end
+
+-- dessine un fond etoile
+function drawstarground(col,t)
+	for x=1,128 do
+		for y=1,128 do
+
+			if rnd(1)>t then
+				drawstar(x,y,col)
+			end
+		end
+	end
+end
+
+-- utilisation
+cls()
+drawstarground(5,0.99)
+drawstarground(6,0.995)
+drawstarground(7,0.9975)
+drawstarground(8,0.999)
+drawstarground(9,0.999)
+```
