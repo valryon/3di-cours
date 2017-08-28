@@ -217,6 +217,8 @@ end
 
 8. Modifier les appels pour avoir des décors plus ou moins fournis selon la profondeur et ajouter de la couleur
 
+![Résultat](./imgs/starground.png)
+
 ```lua
 -- dessine un +
 function drawstar(x,y,col)

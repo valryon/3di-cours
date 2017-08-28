@@ -124,9 +124,6 @@ FUNCTION _DRAW()
 END
 ```
 
+![Enemies](./imgs/enemies.png)
+
 L'intérêt ? On affiche avec une seule ligne de code 0, 1, 2 ou plusieurs ennemis !
-
-## Exemple
-
-TODO
-Tableau de tableau

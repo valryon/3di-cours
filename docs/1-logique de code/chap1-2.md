@@ -100,6 +100,8 @@ END
 
 3. Ajouter un `IF` permettant de savoir si le joueur appuie sur le bouton 4 (`BTN(4)` touche C du clavier) et n'afficher le pixel que si la touche est appuyée
 
+![Exo](./imgs/exo12_1.gif)
+
 #### Correction
 
 ```lua

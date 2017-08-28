@@ -36,6 +36,10 @@ Quelques liens bien utiles :
 
 Lancer l'exécutable PICO-8. ESC permet de passer du `prompt` (là où on tape des commandes) à l'éditeur et vice-versa
 
+![Prompt](./imgs/prompt.png)
+
+![Editeur](./imgs/codeeditor.png)
+
 Quelques commandes :
 
 |Commande|Effet|
@@ -46,3 +50,11 @@ Quelques commandes :
 | `LOAD`| permet de charger un fichier |
 | `RUN`| permet de lancer le jeu chargé |
 | `CLS`| nettoie l'écran |
+
+## GIF
+
+PICO-8 permet d'enregistrer et d'exporter des GIF super simplement.
+
+1. Appuyez sur `F8` pour indiquer le début du GIF
+2. Appuyez sur `F4` pour terminer le GIF
+3. Admirez votre oeuvre sur le bureau

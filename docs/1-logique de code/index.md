@@ -5,3 +5,4 @@
 - [Les structures de contrôle (if, for, while)](./chap1-2.md)
 - [Les fonctions](./chap1-3.md)
 - [Tableaux et liste](./chap1-4.md)
+- [Exercices et mini-jeux avec PICO-8](./chap1-5.md)

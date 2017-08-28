@@ -26,6 +26,8 @@ HELLO
 WORLD
 ```
 
+![Hello world](./imgs/helloworld.png)
+
 ### Syntaxe
 
 C'est le langage **Lua** qui est utilisé dans PICO-8 dans une forme simplifié. En effet, l'éditeur ne propose qu'une partie des fonctionnalités du langage et le code est écrit en majuscule, *à l'ancienne*.
@@ -192,6 +194,8 @@ Ces comparaisons retournent une valeur **booléenne** : vrai (`true`) ou faux (`
 4. Afficher un autre texte légèrement en dessous du premier
 5. Afficher un autre texte légèrement en dessous du second
 6. Modifier uniquement `x` et `y` : le texte doit bouger en conséquence
+
+![Faim](./imgs/faim.png)
 
 ## Correction
 
