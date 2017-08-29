@@ -1,5 +1,6 @@
 ---
 title: Amusons-nous avec PICO-8
+layout: pico8
 ---
 
 Moins de théorie, plus de pratique ! Voici des exercices divers et variés.

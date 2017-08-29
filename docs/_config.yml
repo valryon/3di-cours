@@ -16,6 +16,13 @@ excerpt_separator: <!--more-->
 # Collections.
 # -------------------------------------------------------
 
+collections:
+  pico8:
+    output: true
+    permalink: /pico8/:title/
+  csharp:
+    output: true
+    permalink: /csharp/:title/
 
 # -------------------------------------------------------
 # Defaults.

@@ -1,5 +1,6 @@
 ---
 title: Instructions et variables
+layout: pico8
 ---
 
 C'est parti pour programmer un peu.

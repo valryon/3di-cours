@@ -1,5 +1,6 @@
 ---
 title: Structures de contrôle
+layout: pico8
 ---
 
 Le code est exécuté de haut en bas, ligne par ligne.

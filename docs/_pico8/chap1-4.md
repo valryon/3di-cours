@@ -1,5 +1,6 @@
 ---
 title: Les tableaux
+layout: pico8
 ---
 
 Avec les variables, nous avons vu comment stocker **une valeur** dans **une variable**.

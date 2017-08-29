@@ -1,5 +1,6 @@
 ---
 title: PICO-8
+layout: pico8
 ---
 
 ## C'est quoi ?

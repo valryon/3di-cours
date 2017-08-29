@@ -1,5 +1,6 @@
 ---
 title: Les fonctions
+layout: pico8
 ---
 
 Vous avez déjà vu le mot clé `FUNCTION` dans les chapitres précédents. Nous allons nous intéresser à ce mécanisme de base qui permet de réutiliser intelligemment du code.

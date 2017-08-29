@@ -3,3 +3,9 @@
 🇫🇷 : Supports de cours pour la [licence 3di à l'UCO Laval](http://www.laval3di.org/laval-3di.html)
 
 [Accéder aux cours](http://dmayance.com/3di-cours/)
+
+## Crédits
+
+Merci à [Laurent Victorino](https://twitter.com/on_code) pour les idées et les conseils.
+
+Ce site est hébergé sur GitHub Pages grâce à Jekyll. [Il est open-source](https://github.com/valryon/3di-cours).

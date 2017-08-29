@@ -1,5 +1,7 @@
 ---
 title: Programmation C# dans Unity3D
+layout: course
+tag: summary
 ---
 
 ## Généralités
