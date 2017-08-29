@@ -1,6 +1,3 @@
 # Interfaces graphiques (WinForms)
 
-
-## Exercice
-
-TODO
+*Note : Support récapitulatif des notions vues en cours uniquement *
