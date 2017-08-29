@@ -4,9 +4,18 @@ Moins de théorie, plus de pratique ! Voici des exercices divers et variés.
 
 ## Exercice : tunnel épileptique
 
-TODO
+Premier effet visuel facile et inutile :
 
 ![Tunnel](./imgs/tunnel.gif)
+
+1. Dessiner un cercle avec `circfill(x,y,rayon,color)`
+2. Le rayon du cercle doit devenir une variable `r`. Augmenter cette variable à chaque frame dans `_UPDATE()` et dessinez le cercle dans `_DRAW()`
+3. Au lieu d'avoir un seul rayon, créons un tableau de rayons de cercle. Chaque rayon doit être augmenter et dessiner à chaque frame.
+Ajouter 3-4 rayons (et donc cercle) pour tester.
+4. Créez automatiquement des cercles régulièrement (par exemple toutes les 30 frames). On peut obtenir une couleur aléatoire avec `flr(rnd(15))`
+5. Supprimez automatiquement des cercles (par exemple quand le rayon d'un cercle est > 100 ou quand on a plus de 5 crecles à l'écran)
+
+### Correction
 
 ```lua
 circles={}
