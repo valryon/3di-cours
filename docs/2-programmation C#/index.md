@@ -1,4 +1,6 @@
-# Programmation C#
+---
+title: Programmation C#
+---
 
 - [Découverte du C#](1. programmation C#/chap2-0.md)
 - [Tableaux et liste](1. programmation C#/chap2-1.md)

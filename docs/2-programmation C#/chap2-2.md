@@ -1,4 +1,6 @@
-# Les fichiers
+---
+title: Les fichiers
+---
 
 TODO
 

@@ -1,4 +1,6 @@
-# Instructions et variables
+---
+title: Instructions et variables
+---
 
 C'est parti pour programmer un peu.
 

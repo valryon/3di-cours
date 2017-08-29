@@ -1,8 +1,10 @@
-# Logique de code
+---
+title: PICO-8 et bases de la programmation
+---
 
-- [PICO-8](./chap1-0.md)
-- [Instructions et variables](./chap1-1.md)
-- [Les structures de contrôle (if, for, while)](./chap1-2.md)
-- [Les fonctions](./chap1-3.md)
-- [Tableaux et liste](./chap1-4.md)
-- [Exercices et mini-jeux avec PICO-8](./chap1-5.md)
+- [PICO-8](./chap1-0)
+- [Instructions et variables](./chap1-1)
+- [Les structures de contrôle (if, for, while)](./chap1-2)
+- [Les fonctions](./chap1-3)
+- [Tableaux et liste](./chap1-4)
+- [Exercices et mini-jeux avec PICO-8](./chap1-5)

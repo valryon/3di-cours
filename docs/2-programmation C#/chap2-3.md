@@ -1,5 +1,6 @@
-# La sérialisation
-
+---
+title: La sérialisation
+---
 
 ## Exercice
 

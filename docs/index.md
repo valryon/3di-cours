@@ -1,4 +1,6 @@
-# Support de cours - Laval 3di
+---
+title: Support de cours - Laval 3di
+---
 
 Bases de la programmation avec PICO-8, découverte de Unity3D, Programmation C#
 

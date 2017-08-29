@@ -1,4 +1,6 @@
-# Tableaux et liste
+---
+title: Tableaux et liste
+---
 
 TODO
 

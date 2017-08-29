@@ -1,4 +1,6 @@
-# PICO-8
+---
+title: PICO-8
+---
 
 ## C'est quoi ?
 

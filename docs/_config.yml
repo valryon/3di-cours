@@ -1,1 +1,71 @@
-theme: jekyll-theme-leap-day
+name: UE Programmation - Laval 3di
+
+# -------------------------------------------------------
+# Globals.
+# -------------------------------------------------------
+
+show_drafts: nil
+permalink: /:title/
+
+include: ['_pages']
+exclude: ['README.md', 'LICENSE', 'package.json', 'gulpfile.js', 'node_modules', 'Gemfile', 'Gemfile.lock']
+
+excerpt_separator: <!--more-->
+
+# -------------------------------------------------------
+# Collections.
+# -------------------------------------------------------
+
+
+# -------------------------------------------------------
+# Defaults.
+# -------------------------------------------------------
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "code"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "post"
+
+# -------------------------------------------------------
+# Markdown.
+# -------------------------------------------------------
+
+kramdown:
+  input: GFM
+  parse_block_html: true
+  parse_span_html: true
+
+# -------------------------------------------------------
+# Code.
+# -------------------------------------------------------
+
+highlighter: rouge
+
+# -------------------------------------------------------
+# Plugins.
+# -------------------------------------------------------
+
+gems:
+  - jekyll-redirect-from

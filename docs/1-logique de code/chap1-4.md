@@ -1,4 +1,6 @@
-# Tableaux
+---
+title: Les tableaux
+---
 
 Avec les variables, nous avons vu comment stocker **une valeur** dans **une variable**.
 

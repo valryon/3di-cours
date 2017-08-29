@@ -1,4 +1,6 @@
-# Structures de contrôle
+---
+title: Structures de contrôle
+---
 
 Le code est exécuté de haut en bas, ligne par ligne.
 
