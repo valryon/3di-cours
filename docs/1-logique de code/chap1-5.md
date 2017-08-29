@@ -2,6 +2,47 @@
 
 Moins de théorie, plus de pratique ! Voici des exercices divers et variés.
 
+## Exercice : tunnel épileptique
+
+TODO
+
+![Tunnel](./imgs/tunnel.gif)
+
+```lua
+circles={}
+
+function addcircle()
+	add(circles, {
+		r=1,
+		col=flr(rnd(15))
+	})
+end
+
+function _init()
+	addcircle()
+end
+
+function _update()
+	for c in all(circles) do
+		c.r=c.r+1
+		if c.r==42 then
+			addcircle()
+		end
+	end
+
+	if #circles>4 then
+		del(circles, circles[1])
+	end
+end
+
+function _draw()
+	cls()
+	for c in all(circles) do
+		circfill(64,64,c.r,c.col)
+	end
+end
+```
+
 ## Exercice : exploser un hamburger
 
 A un moment quelqu'un me dira que j'ai un problème avec la bouffe.
@@ -118,3 +159,14 @@ function _draw()
 	end
 end
 ```
+
+# TODO
+
+Idées
+
+Scroling
+Collisions
+
+Map
+
+Shooter
