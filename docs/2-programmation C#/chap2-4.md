@@ -1,6 +1,5 @@
-# Tableaux et liste
+# Interfaces graphiques (WinForms)
 
-TODO
 
 ## Exercice
 
