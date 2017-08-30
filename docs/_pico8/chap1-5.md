@@ -3,6 +3,65 @@ title: Amusons-nous avec PICO-8
 layout: pico8
 ---
 
+## Sprites
+
+1. Dessiner un sprite dans le 2e onglet
+2. Dans `_DRAW()`
+	- `SPR(n, x, y, [w, h], [flip_x], [flip_y])` pour afficher le sprite `n` (position dans la spritesheet) en x,y à la taille w*h
+3. Besoin d'animations ? Il faut changer le numéro de sprite par le suivant.
+
+```lua
+frame=1
+
+function _UPDATE()
+	frame=frame+1
+	if frame>2 then frame=1 end
+end
+
+function _DRAW()
+	cls()
+	spr(frame,64,64)
+end
+```
+
+## Map
+
+1. Dessiner des sprites dans le 2e onglet
+2. Placer les sprites sur la map dans le 3e onglet
+3. Dans `_DRAW()`
+	- `MAP(x,y,0,0,w,h)` pour afficher la carte entre (x,y,w,h)
+
+```lua
+cam={x=0,y=0,w=16,h=32}
+
+function _DRAW()
+	cls()
+	map(cam.x,cam.y,0,0,cam.w,cam.h)
+end
+```
+
+## Collisions
+
+### Avec la map
+
+1. Dessiner des sprites dans le 2e onglet. Un bloc par exemple.
+2. Affecter un "flag" à ce sprite, typiquement le premier.
+3. Utiliser ce sprite sur la map
+4. Dans `_UPDATE()` :
+	- Récupérer le sprite utilisé dans la map avec `mget(x,y)`
+	- Récupérer si un flag est utilisé sur un sprite avec `fget(sprite, flag)`
+
+### Avec un autre élément
+
+Pas d'astuces faciles... quelques pistes :
+
+1. tester si deux carrés se chevauchent
+2. tester si les pixels avant/après notre sprite sont noirs/vides ou non
+
+
+-- 
+
+
 Moins de théorie, plus de pratique ! Voici des exercices divers et variés.
 
 ## Exercice : tunnel épileptique
