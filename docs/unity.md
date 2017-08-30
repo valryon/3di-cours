@@ -3,6 +3,8 @@ title: Découverte de Unity3D
 layout: default
 ---
 
+## Plan du cours
+
 <ul>
   {% for post in site.unity %}
     <li>

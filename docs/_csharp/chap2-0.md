@@ -5,13 +5,6 @@ layout: default
 
 je pars du principe que vous avez acquis les bases de la programmation dans le cours PICO-8 précédent.
 
-## Documentation officielle
-
-Pour aller plus loin, vérifier mes propos, avoir de l'aide sur un mot clé ou une notion :
-
-- [Guide de la programmation C# - Microsoft](https://msdn.microsoft.com/fr-fr/library/67ef8sbd.aspx)
-- [Tutoriels C# - Microsoft](https://msdn.microsoft.com/fr-fr/library/aa288436(v=vs.71).aspx)
-
 ## Généralités
 
 Le code est un moyen pour l'humain de donner des ordres à un ordinateur.
@@ -358,4 +351,23 @@ Exemples d'appels :
   int b = Puissance2(4);
   string joueur1 = GetPlayerName(0, "windows");
   string joueur2 = GetPlayerName(1, "macOS");
+```
+
+## Les erreurs
+
+Le C# dispose d'un mécanisme de gestion des erreurs puissant. Ces erreurs sont appelées des **exceptions** et elles sont **levées** (*throw*) quand quelque chose ne va pas : ouvrir un fichier qui n'existe pas, division par 0, etc.
+
+Une exception est destinée à faire planter le programme si elle n'est pas prise en charge.
+
+Il est donc possible de les récupérer en entourant le code qui génère des erreurs avec un `try/catch` :
+
+```csharp
+try
+{
+  File.ReadAllLines(@"C:\Windows\kikoo.txt");
+}
+catch(Exception e)
+{
+  Console.WriteLine("Une erreur s'est produite : " + e);
+}
 ```
