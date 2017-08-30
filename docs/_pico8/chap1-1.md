@@ -1,6 +1,6 @@
 ---
 title: Instructions et variables
-layout: pico8
+layout: default
 ---
 
 C'est parti pour programmer un peu.
@@ -29,7 +29,7 @@ HELLO
 WORLD
 ```
 
-![Hello world](./imgs/helloworld.png)
+![Hello world]({{site.url}}/static/content/pico8/helloworld.png)
 
 ### Syntaxe
 
@@ -198,7 +198,7 @@ Ces comparaisons retournent une valeur **booléenne** : vrai (`true`) ou faux (`
 5. Afficher un autre texte légèrement en dessous du second
 6. Modifier uniquement `x` et `y` : le texte doit bouger en conséquence
 
-![Faim](./imgs/faim.png)
+![Faim]({{site.url}}/static/content/pico8/faim.png)
 
 ## Correction
 

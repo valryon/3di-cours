@@ -1,6 +1,6 @@
 ---
 title: Tableaux et liste
-layout: csharp
+layout: default
 ---
 
 TODO

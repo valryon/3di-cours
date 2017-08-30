@@ -1,6 +1,6 @@
 ---
 title: Les fonctions
-layout: pico8
+layout: default
 ---
 
 Vous avez déjà vu le mot clé `FUNCTION` dans les chapitres précédents. Nous allons nous intéresser à ce mécanisme de base qui permet de réutiliser intelligemment du code.
@@ -220,7 +220,7 @@ end
 
 8. Modifier les appels pour avoir des décors plus ou moins fournis selon la profondeur et ajouter de la couleur
 
-![Résultat](./imgs/starground.png)
+![Résultat]({{site.url}}/static/content/pico8/starground.png)
 
 ```lua
 -- dessine un +

@@ -1,6 +1,6 @@
 ---
 title: Amusons-nous avec PICO-8
-layout: pico8
+layout: default
 ---
 
 ## Sprites
@@ -59,7 +59,7 @@ Pas d'astuces faciles... quelques pistes :
 2. tester si les pixels avant/après notre sprite sont noirs/vides ou non
 
 
--- 
+--
 
 
 Moins de théorie, plus de pratique ! Voici des exercices divers et variés.
@@ -68,7 +68,7 @@ Moins de théorie, plus de pratique ! Voici des exercices divers et variés.
 
 Premier effet visuel facile et inutile :
 
-![Tunnel](./imgs/tunnel.gif)
+![Tunnel]({{site.url}}/static/content/pico8/tunnel.gif)
 
 1. Dessiner un cercle avec `circfill(x,y,rayon,color)`
 2. Le rayon du cercle doit devenir une variable `r`. Augmenter cette variable à chaque frame dans `_UPDATE()` et dessinez le cercle dans `_DRAW()`
@@ -120,7 +120,7 @@ A un moment quelqu'un me dira que j'ai un problème avec la bouffe.
 
 En attendant, un effet visuel sympa :
 
-![Goodbye Hamburger](./imgs/hamburger.gif)
+![Goodbye Hamburger]({{site.url}}/static/content/pico8/hamburger.gif)
 
 1. Dessiner un hamburger à l'écran. Pour cela, on va stocker dans une variable la position `x`,`y` et la couleur de chaque pixel du hamburger.
 2. On utilisera ensuite une boucle `for` dans `_DRAW()` pour afficher en une seule ligne chaque pixel du hamburger.

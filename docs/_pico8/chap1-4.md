@@ -1,6 +1,6 @@
 ---
 title: Les tableaux
-layout: pico8
+layout: default
 ---
 
 Avec les variables, nous avons vu comment stocker **une valeur** dans **une variable**.
@@ -127,6 +127,6 @@ FUNCTION _DRAW()
 END
 ```
 
-![Enemies](./imgs/enemies.png)
+![Enemies]({{site.url}}/static/content/pico8/enemies.png)
 
 L'intérêt ? On affiche avec une seule ligne de code 0, 1, 2 ou plusieurs ennemis !

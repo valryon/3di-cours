@@ -1,6 +1,6 @@
 ---
 title: Interfaces graphiques (WinForms)
-layout: csharp
+layout: default
 ---
 
 *Note : Support récapitulatif des notions vues en cours uniquement *

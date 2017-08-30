@@ -1,6 +1,6 @@
 ---
 title: Les fichiers
-layout: csharp
+layout: default
 ---
 
 TODO

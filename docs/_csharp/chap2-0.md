@@ -1,6 +1,6 @@
 ---
 title: Découverte du C#
-layout: csharp
+layout: default
 ---
 
 je pars du principe que vous avez acquis les bases de la programmation dans le cours PICO-8 précédent.

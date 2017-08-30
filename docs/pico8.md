@@ -1,6 +1,6 @@
 ---
 title: PICO-8 et bases de la programmation
-layout: pico8
+layout: default
 ---
 
 <ul>

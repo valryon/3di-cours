@@ -1,6 +1,6 @@
 ---
 title: PICO-8
-layout: pico8
+layout: default
 ---
 
 ## C'est quoi ?
@@ -10,6 +10,9 @@ Une "fantasy console". Une console virtuelle qui fait tourner des vrais jeux et 
 - Le site officiel : [https://www.lexaloffle.com/pico-8.php](https://www.lexaloffle.com/pico-8.php)
 - Une licence pour chez vous = 15$ (~13€)
 - Installé sur les postes de l'UCO mais licence **éducation** à ne pas ramener chez vous
+
+
+![Editeur]({{site.url}}/static/content/pico8/p8_jelpi.gif)
 
 ## Pourquoi ? C'est tout petit, tout moche, tout...
 
@@ -39,9 +42,9 @@ Quelques liens bien utiles :
 
 Lancer l'exécutable PICO-8. ESC permet de passer du `prompt` (là où on tape des commandes) à l'éditeur et vice-versa
 
-![Prompt](./imgs/prompt.png)
+![Prompt]({{site.url}}/static/content/pico8/prompt.png)
 
-![Editeur](./imgs/codeeditor.png)
+![Editeur]({{site.url}}/static/content/pico8/codeeditor.png)
 
 Quelques commandes :
 

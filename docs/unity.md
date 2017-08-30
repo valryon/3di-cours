@@ -1,10 +1,10 @@
 ---
-title: Programmation C# comme les vrais
+title: Découverte de Unity3D
 layout: default
 ---
 
 <ul>
-  {% for post in site.csharp %}
+  {% for post in site.unity %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>

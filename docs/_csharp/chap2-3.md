@@ -1,6 +1,6 @@
 ---
 title: La sérialisation
-layout: csharp
+layout: default
 ---
 
 ## Exercice

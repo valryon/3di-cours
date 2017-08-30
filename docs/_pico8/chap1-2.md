@@ -1,6 +1,6 @@
 ---
 title: Structures de contrôle
-layout: pico8
+layout: default
 ---
 
 Le code est exécuté de haut en bas, ligne par ligne.
@@ -103,7 +103,7 @@ END
 
 3. Ajouter un `IF` permettant de savoir si le joueur appuie sur le bouton 4 (`BTN(4)` touche C du clavier) et n'afficher le pixel que si la touche est appuyée
 
-![Exo](./imgs/exo12_1.gif)
+![Exo]({{site.url}}/static/content/pico8/exo12_1.gif)
 
 #### Correction
 

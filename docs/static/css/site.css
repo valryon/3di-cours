@@ -1,6 +1,6 @@
 /*
  * Damien Mayance
- * Url: http://dmayance.com/
+ * Url: http://3di.dmayance.com/
  */
 
 /**************************************************************
@@ -42,7 +42,7 @@ strong {
  **************************************************************/
 
 .page {
-   max-width: 650px;
+   max-width: 720px;
 
    padding: 0 20px;
    margin-left: auto;
@@ -71,12 +71,6 @@ strong {
 
 /* Name and links */
 
-.banner-left {
-  display: table-cell;
-  width: auto;
-  vertical-align: top;
-}
-
 .banner-a {
   text-decoration: none;
   color: #797979;
@@ -92,76 +86,46 @@ strong {
 }
 
 .banner-name {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 100;
   text-transform: uppercase;
+  text-align: center;
   margin: 15px auto 4px;
 }
 
-/* Avatar */
-
-.banner-right {
-  display: table-cell;
-  width: 120px;
-  vertical-align: top;
-  text-align: right;
-}
-
-.banner-avatar img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.banner-avatar a {
-  display: block;
-}
-
-.banner-avatar a img {
-  -webkit-transition: -webkit-transform 0.15s ease-out;
-  transition: -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
-}
-
-.banner-avatar a:hover img {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+.banner-subtitle {
+  width: 100%;
+  text-align: center;
+  margin: 21px 0px 21px 0px;
 }
 
 /* Links */
 
 .banner-links {
   display: inline;
-  padding-left: 0;
+  padding: 0;
 }
 
 .banner-link {
   display: inline-block;
   list-style-type: none;
-  text-transform: uppercase;
-  width: 125px;
+  margin: 0px 21px 12px 21px;
+
+  transition: transform 0.15s ease-out;
+}
+
+.banner-link:hover {
+    transform: scale(1.25);
 }
 
 .banner-link a {
   display: inline-block;
   height: 20px;
   padding-top: 1px;
-  padding-left: 24px;
   background-repeat: no-repeat;
   background-size: 18px 18px;
-}
-
-.twitter a {
-  background-image: url(../images/icon-twitter@2x.png);
-}
-
-.github a {
- background-image: url(../images/icon-github@2x.png);
-}
-
-.linkedin a {
- background-image: url(../images/icon-linkedin@2x.png);
+  width: 125px;
+  color: #FFFFFF;
 }
 
 /* On mobile display links vertically */
@@ -170,9 +134,6 @@ strong {
 @media(max-width: 550px) {
   .banner-name {
     font-size: 30px;
-  }
-  .banner-link {
-    display: block;
   }
   .banner-link a {
     display: list-item;;
@@ -212,136 +173,6 @@ strong {
 }
 
 /**************************************************************
-* Projects
-**************************************************************/
-
-.project {
-  margin-bottom: 24px;
-  display: table;
-}
-
-.project-left {
-  display: table-cell;
-  width: 33%;
-  vertical-align: top;
-}
-
-.project-left img {
-  width: 250px;
-  height: 100px;
-}
-
-.project-right {
-  display: table-cell;
-  width: 66%;
-  vertical-align: middle;;
-  padding-left: 12px;
-  padding-right: 6px;
-  padding-bottom: 16px;
-
-  line-height: 1.5em;
-}
-
-.project-right p {
-  margin: 0px;
-}
-
-.project strong {
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-.project a {
-  display: block;
-  text-decoration: none;
-  color: #444444;
-
-  -webkit-transition: -webkit-transform 0.15s ease-out;
-  transition: -webkit-transform 0.15s ease-out;
-  transition: transform 0.15s ease-out;
-  transition: transform 0.15s ease-out, -webkit-transform 0.15s ease-out;
-}
-
-.project a:hover {
-  text-decoration: none;
-  color: #4198E6;
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
-}
-
-.project a:focus {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-.project a:visited {
-  text-decoration: none;
-}
-
-/* Hide text on mobile */
-@media(max-width: 550px) {
-  .project {
-    display: block;
-  }
-  .project-left {
-    display: block;
-    width: 100%;
-  }
-  .project-left img {
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-  }
-  .project-right {
-    display: none;
-  }
-}
-
-/**************************************************************
-* Code & events
-**************************************************************/
-
-.element {
-  margin-bottom: 24px;
-}
-
-.element a {
-  display: block;
-  text-decoration: none;
-  color:#444444;
-}
-
-.element a:visited {
-  text-decoration: none;
-}
-
-.element-title {
-  display: inline;
-  text-transform: uppercase;
-  color: #1686DB;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
-
-.element-desc {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 14px;
-}
-
-.element a .element-title,
-.element a .element-desc {
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-}
-
-.element a:hover .element-title,
-.element a:hover .element-desc {
-  text-decoration: none;
-  color: #35C1F1;
-}
-
-/**************************************************************
 * Tags
 **************************************************************/
 
@@ -367,98 +198,41 @@ strong {
   background-color: #969696;
 }
 
-.unity {
+/**************************************************************
+ * Colors
+ **************************************************************/
+
+.csharp {
   background-color: #FF0066;
 }
 
-.pico-8 {
+.pico8 {
   background-color: #2D5EFF;
 }
 
-.game {
-  background-color: #0087FF;
+.unity {
+  background-color: #7ACC1C;
+}
+
+.unreal {
+  background-color: #99183C;
 }
 
 .pixelnest {
   background-color: #FF4600;
 }
 
-.prototype {
-  background-color: #7ACC1C;
-}
-
-.plugin {
-  background-color: #778D99;
-}
-
-.app {
-  background-color: #99183C;
-}
-
 /**************************************************************
- * Posts and special pages
+ * Components
  **************************************************************/
 
-.post-header {
-  margin-top: 21px;
-  margin-bottom: 42px;
-  text-align: center;
-}
-
-.post-date {
-  text-transform: uppercase;
-  text-align: center;
-  font-style: italic;
-  font-size: 14px;
-  color: #F9644B;
-
-  margin-top: 0px
-}
-
-.post h1 {
-  text-transform: uppercase;
-  text-align: center;
-  color: #8C8C8C;
-  font-size: 24px;
-  font-weight: bold;;
-
-  margin-bottom: 6px;
-}
-
-.post h1:first-child {
-  border-top: 1px solid #E8E8E8;
-  padding-top: 30px;
-  margin-top: 0px;
-}
-
-.post h2 {
-  color: #8C8C8C;
-  font-size: 20px;
-  font-weight: 250;
-
-  margin-top: 42px;
-  margin-bottom: 21px;
-
-  border-bottom: 1px dotted #000;
-}
-
-.post h3 {
-  text-align: left;
-  color: #8C8C8C;
-  font-size: 17px;
-  font-weight: 250;
-
-  margin-top: 42px;
-  margin-bottom: 21px;
-}
-
-.post img {
+.page img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 
-.post iframe {
+.page iframe {
   display: block;
   max-width: 100%;
   margin: 0 auto 1.6rem;
@@ -508,8 +282,25 @@ p code, li code {
 }
 
 /**************************************************************
+ * Tables
+ **************************************************************/
+ table {
+  width: 100%;
+}
+
+thead {
+  color: #ffffff;
+  background: #2980b9;
+}
+
+tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+/**************************************************************
  * Footer
  **************************************************************/
+
 .page-footer {
 
   /* Page's bottom */
