@@ -9,9 +9,9 @@ layout: default
 2. Écrire la fonction `Mul(a,b)` qui fait la multiplication de `a` et `b` et retourne le résultat
 
 3. Division
-  1. Écrire la fonction `Div(a,b)` qui fait la division de `a` et `b` et retourne le résultat.
-  2. Tester la division quand `a` vaut 0 puis quand `b` vaut 0
-  3. Gérer le cas où il y a une erreur avec un 0
+  - Écrire la fonction `Div(a,b)` qui fait la division de `a` et `b` et retourne le résultat.
+  - Tester la division quand `a` vaut 0 puis quand `b` vaut 0
+  - Gérer le cas où il y a une erreur avec un 0
 
 ### Corrections
 
