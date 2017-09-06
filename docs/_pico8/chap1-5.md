@@ -230,14 +230,3 @@ function _draw()
 	end
 end
 ```
-
-# TODO
-
-Idées
-
-Scroling
-Collisions
-
-Map
-
-Shooter
