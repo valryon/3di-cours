@@ -58,6 +58,60 @@ Pas d'astuces faciles... quelques pistes :
 1. tester si deux carrés se chevauchent
 2. tester si les pixels avant/après notre sprite sont noirs/vides ou non
 
+Une fonction pratique :
+
+```lua
+function collide(a, b)
+	if	a.x+a.w > b.x and
+		 	a.y+a.h > b.y and
+	 		a.x < b.x+b.w and
+ 			a.y < b.y+b.h
+	then
+		return true
+	end
+	return false
+end
+```
+
+Exemple :
+
+```lua
+bullet={x=0,y=0,w=3,h=3}
+spaceship{x=0,y=0,w=8,h=8}
+
+if collide(spaceship,bullet) then
+	-- boom
+end
+```
+
+Une version avec hitbox:
+
+```lua
+function collide(obj, other)
+    if
+        other.pos.x+other.hitbox.x+other.hitbox.w > obj.pos.x+obj.hitbox.x and
+        other.pos.y+other.hitbox.y+other.hitbox.h > obj.pos.y+obj.hitbox.y and
+        other.pos.x+other.hitbox.x < obj.pos.x+obj.hitbox.x+obj.hitbox.w and
+        other.pos.y+other.hitbox.y < obj.pos.y+obj.hitbox.y+obj.hitbox.h
+    then
+        return true
+    end
+end
+```
+
+Exemple :
+
+```lua
+bullet.pos={x=10,y=10}
+bullet.hitbox={x=0,y=0,w=3,h=3}
+
+spaceship.pos={x=15,y=15}
+spaceship.hitbox={x=0,y=0,w=10,h=5}
+
+if collide(spaceship,bullet) then
+	-- boom
+end
+```
 
 --
 
@@ -228,5 +282,211 @@ function _draw()
 	for p=1,#hamburger do
 		pset(hamburger[p].x,hamburger[p].y,hamburger[p].c)
 	end
+end
+```
+
+## Exercice : casse-brique
+
+![Breakout]({{site.url}}/static/content/pico8/breakout.gif)
+
+1. Faire un sprite de balle
+2. Afficher la balle
+3. La faire bouger à chaque frame en x et y. La vitesse doit être une variable.
+4. Faire rebondir sur les murs et le plafond (inverser la vitesse en x ou y )
+5. Ajouter une palette pour joueur
+6. Déplacer la palette en x avec les flèches dans les limites de l'écran
+7. Ajouter la collision balle/joueur (rebond sur la palette)
+```lua
+function collide(a, b)
+	if	a.x+a.w > b.x and
+		 	a.y+a.h > b.y and
+	 		a.x < b.x+b.w and
+ 			a.y < b.y+b.h
+	then
+		return true
+	end
+	return false
+end
+```
+8. Faire des sprites de blocks
+9. Ajouter des blocks et les afficher
+10. Ajouter collision balle/block (détruire block + rebond)
+Bonus: Ajouter scores, vie, effets, sons, etc!
+
+### Correction
+
+```lua
+-- breakout
+-- damien mayance (@valryon)
+
+-- vars
+player={x=54,y=114,w=24,h=8,dx=2}
+ball={x=0,y=0,w=8,h=8,s=5,dx=1,dy=1}
+blocks={
+	{x=16,y=24,w=8,h=8,s=1},
+	{x=24,y=24,w=8,h=8,s=1},
+	{x=32,y=24,w=8,h=8,s=1},
+	{x=40,y=24,w=8,h=8,s=1},
+	{x=48,y=24,w=8,h=8,s=1},
+	{x=56,y=24,w=8,h=8,s=1},
+	{x=64,y=24,w=8,h=8,s=1},
+	{x=72,y=24,w=8,h=8,s=1},
+	{x=80,y=24,w=8,h=8,s=1},
+	{x=88,y=24,w=8,h=8,s=1},
+	{x=96,y=24,w=8,h=8,s=1},
+	{x=104,y=24,w=8,h=8,s=1},
+	{x=16,y=36,w=8,h=8,s=2},
+	{x=24,y=36,w=8,h=8,s=2},
+	{x=32,y=36,w=8,h=8,s=2},
+	{x=40,y=36,w=8,h=8,s=2},
+	{x=48,y=36,w=8,h=8,s=2},
+	{x=56,y=36,w=8,h=8,s=2},
+	{x=64,y=36,w=8,h=8,s=2},
+	{x=72,y=36,w=8,h=8,s=2},
+	{x=80,y=36,w=8,h=8,s=2},
+	{x=88,y=36,w=8,h=8,s=2},
+	{x=96,y=36,w=8,h=8,s=2},
+	{x=104,y=36,w=8,h=8,s=2},
+	{x=16,y=48,w=8,h=8,s=3},
+	{x=24,y=48,w=8,h=8,s=3},
+	{x=32,y=48,w=8,h=8,s=3},
+	{x=40,y=48,w=8,h=8,s=3},
+	{x=48,y=48,w=8,h=8,s=3},
+	{x=56,y=48,w=8,h=8,s=3},
+	{x=64,y=48,w=8,h=8,s=3},
+	{x=72,y=48,w=8,h=8,s=3},
+	{x=80,y=48,w=8,h=8,s=3},
+	{x=88,y=48,w=8,h=8,s=3},
+	{x=96,y=48,w=8,h=8,s=3},
+	{x=104,y=48,w=8,h=8,s=3},
+	{x=16,y=12,w=8,h=8,s=4},
+	{x=24,y=12,w=8,h=8,s=4},
+	{x=32,y=12,w=8,h=8,s=4},
+	{x=40,y=12,w=8,h=8,s=4},
+	{x=48,y=12,w=8,h=8,s=4},
+	{x=56,y=12,w=8,h=8,s=4},
+	{x=64,y=12,w=8,h=8,s=4},
+	{x=72,y=12,w=8,h=8,s=4},
+	{x=80,y=12,w=8,h=8,s=4},
+	{x=88,y=12,w=8,h=8,s=4},
+	{x=96,y=12,w=8,h=8,s=4},
+	{x=104,y=12,w=8,h=8,s=4},
+}
+
+function _init()
+	reset()
+end
+
+-- loop
+function _update()
+
+	-- move player on inputs
+	if(btn(0) and player.x>8) then
+		player.x=player.x-player.dx
+	elseif(btn(1) and player.x<(128-player.w)) then
+		player.x=player.x+player.dx
+	end
+
+	-- move ball
+	ball.x=ball.x+ball.dx
+	ball.y=ball.y+ball.dy
+	if ball.x<0 or ball.x>128-ball.w then
+		ball.dx=-ball.dx
+	end
+	if ball.y<0 then
+		ball.dy=-ball.dy
+	elseif ball.y>128+ball.h then
+		-- todo game over
+		sfx(2)
+		reset()
+	end
+
+	-- collisions
+	---- ball/player
+	if collide(ball,player) then
+		sfx(1)
+
+		-- rebound
+		ball.dy=-abs(ball.dy)
+
+		---- x is related to the side hit
+		if ball.x+(ball.w/2)>player.x+(player.w/2) then
+			d=1
+		else
+			d=-1
+		end
+		ball.dx=d*abs(ball.dx)
+
+		-- replace above
+		ball.y=player.y-ball.h
+
+		-- speed up (velocity+0.25)
+		ball.dx=ball.dx+(sgn(ball.dx)*0.25)
+		ball.dy=ball.dy+(sgn(ball.dy)*0.25)
+	end
+
+	---- ball/blocks
+	for b in all(blocks) do
+		if collide(ball,b) then
+			-- rebound (direction matters)			
+			ball.dy=-ball.dy
+			if ball.y>b.y+1 and
+						ball.y<b.y+b.h-1
+		 then
+				ball.dx=-ball.dx
+			end
+			-- remove
+			explode(b)
+			-- one block per frame
+			break
+		end
+	end
+end
+
+function _draw()
+	cls()
+
+	-- draw player
+	spr(16,player.x,player.y)
+	spr(17,player.x+8,player.y)
+	spr(18,player.x+16,player.y)
+
+	-- draw ball
+	spr(ball.s,ball.x,ball.y)
+
+	-- draw bricks
+	for b in all(blocks) do
+		spr(b.s,b.x,b.y)
+	end
+
+	-- draw rect around screen
+	rect(0,0,127,129,5)
+end
+
+-- functions
+function reset()
+	ball.x=54
+	ball.y=88
+
+	if(-1+rnd(2)<0) then ball.dx=-1
+	else ball.dx=1	end
+	ball.dy=-1
+end
+
+function explode(b)
+	sfx(0)
+	del(blocks,b)
+end
+
+-- utils
+function collide(a, b)
+	if	a.x+a.w > b.x and
+		 	a.y+a.h > b.y and
+	 		a.x < b.x+b.w and
+ 			a.y < b.y+b.h
+	then
+		return true
+	end
+	return false
 end
 ```

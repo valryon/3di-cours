@@ -55,6 +55,8 @@ FOR i=1,#array DO -- i commence à 1 !
 END
 ```
 
+On peut aussi supprimer un élément avec `del`.
+
 ## Exercice
 
 ### Correction
