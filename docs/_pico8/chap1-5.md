@@ -296,6 +296,7 @@ end
 5. Ajouter une palette pour joueur
 6. Déplacer la palette en x avec les flèches dans les limites de l'écran
 7. Ajouter la collision balle/joueur (rebond sur la palette)
+
 ```lua
 function collide(a, b)
 	if	a.x+a.w > b.x and
@@ -308,6 +309,7 @@ function collide(a, b)
 	return false
 end
 ```
+
 8. Faire des sprites de blocks
 9. Ajouter des blocks et les afficher
 10. Ajouter collision balle/block (détruire block + rebond)
