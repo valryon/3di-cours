@@ -9,3 +9,5 @@
 Merci à [Laurent Victorino](https://twitter.com/on_code) pour les idées et les conseils.
 
 Ce site est hébergé sur GitHub Pages grâce à Jekyll. [Il est open-source](https://github.com/valryon/3di-cours).
+
+Photo by Sai Kiran Anagani on Unsplash.

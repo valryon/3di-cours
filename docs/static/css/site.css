@@ -22,9 +22,13 @@ h1,h2,h3,h3 {
   font-family: Hack, monospace;
 }
 
+h1 {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
-  color: #4198E6;
+  color: #5686C9;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -64,9 +68,9 @@ strong {
 
 .page-header {
   display: table;
-  padding: 12px 0px 12px 0px;
+  padding: 4px 0px 4px 0px;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 /* Name and links */
@@ -85,23 +89,30 @@ strong {
   color: #797979;
 }
 
-.banner-name {
+.banner-title {
   font-size: 32px;
   font-weight: 100;
   text-transform: uppercase;
   text-align: center;
-  margin: 15px auto 4px;
+  margin: 4px auto 4px;
 }
 
 .banner-subtitle {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+  margin: 4px auto 21px 0px;
+}
+
+.banner-links {
   width: 100%;
   text-align: center;
-  margin: 21px 0px 21px 0px;
+  margin: 21px 0px 0px 0px;
 }
 
 /* Links */
 
-.banner-links {
+.banner-links-list {
   display: inline;
   padding: 0;
 }
@@ -120,7 +131,7 @@ strong {
 
 .banner-link a {
   display: inline-block;
-  height: 20px;
+  height: 30px;;
   padding-top: 1px;
   background-repeat: no-repeat;
   background-size: 18px 18px;
@@ -203,15 +214,15 @@ strong {
  **************************************************************/
 
 .csharp {
-  background-color: #FF0066;
+  background-color: #CE2B7C;
 }
 
 .pico8 {
-  background-color: #2D5EFF;
+  background-color: #AFCC3B;
 }
 
 .unity {
-  background-color: #7ACC1C;
+  background-color: #FF6B02;
 }
 
 .unreal {
@@ -290,7 +301,7 @@ p code, li code {
 
 thead {
   color: #ffffff;
-  background: #2980b9;
+  background: #5686C9;
 }
 
 tr:nth-child(even) {
