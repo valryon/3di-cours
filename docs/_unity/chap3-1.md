@@ -3,6 +3,53 @@ title: Unity3D - Petits trucs utiles
 layout: default
 ---
 
+## Obtenir un composant
+
+```csharp
+Rigidbody2D r = GetComponent<Rigidbody2D>();
+Collider2D c = GetComponent<Collider2D>();
+SpriteRenderer c = GetComponent<SpriteRenderer>();
+```
+
+Fonctionne également avec n'importe quel autre composant ou avec **vos scripts** !
+
+## Obtenir un objet
+
+### Par son type
+
+```csharp
+PlayerScript player = FindObjectOfType<PlayerScript>();
+if(player != null)
+{
+
+}
+```
+
+### Par son nom
+
+```csharp
+GameObject o = GameObjet.Find("Nom dans la scène");
+if(o != null)
+{
+
+}
+```
+
+## Déplacer un objet
+
+```csharp
+Vector3 movement = new Vector3(1f, 0.5f, 0f); //(x:1, y:0.5, z:0)
+transform.position += movement;
+```
+
+### Avec la gravité/la physique
+
+```csharp
+Rigidbody2D r = GetComponent<Rigidbody2D>();
+Vector3 movement = new Vector3(5f, 2.5f, 0f);
+r.velocity += movement;
+```
+
 ## Modifier la couleur d'un sprite
 
 ```csharp
@@ -46,3 +93,83 @@ Détruire après N secondes
 ```csharp
 Destroy(gameObject, 3f); // 3 secondes
 ```
+
+## Avoir un nombre aléatoire
+
+```csharp
+float nombreAleatoire = Random.Range(0, 42f);
+```
+
+# Souris
+
+## Position de la souris
+
+A l'écran :
+
+```csharp
+Vector2 p = Input.mousePosition;
+```
+
+Dans le monde :
+
+```csharp
+Vector2 p = Camera.main.ScreenToWorldPosition(Input.mousePosition);
+```
+
+## Clics (maintenu / à l'instant)
+
+```csharp
+// Clic
+bool click = Input.GetMouseButton(0);
+bool clicked = Input.GetMouseButtonDown(0);
+```
+
+## Sélection d'un objet
+
+```csharp
+// Toucher un collider **2D** sur le clic
+// Ne fonctionne qu'avec une caméra orthographique
+if (Input.GetMouseButtonDown(0))
+{
+    // Conversion position écran -> position monde
+    Vector3 positionSouris = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    // "Ray"cast : tirer un trait imaginaire et voir ce que l'on touche
+    RaycastHit2D hit = Physics2D.CircleCast(positionSouris, 0.2f, new Vector2(1, 1));
+
+    // A-t-on touché ?
+    if(hit.transform != null)
+    {
+        // Faire quelque chose
+        // ..
+    }
+}
+```
+
+# Tactile
+
+## Tap
+
+```csharp
+if(Input.touchCount >= 1)
+{
+
+}
+```
+
+## Drag
+
+TODO
+
+## Position d'un doigt
+
+```csharp
+if(Input.touchCount >= 1)
+{
+  var p = Input.touches[0].position;
+  // p est une position sur l'écran, pas dans le monde !
+}
+```
+
+# Coroutines
+
+TODO
