@@ -23,6 +23,9 @@ collections:
   csharp:
     output: true
     permalink: /csharp/:title/
+  unity:
+    output: true
+    permalink: /unity/:title/
 
 # -------------------------------------------------------
 # Defaults.
