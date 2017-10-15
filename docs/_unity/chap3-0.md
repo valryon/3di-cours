@@ -3,6 +3,8 @@ title: Introduction au moteur de jeu Unity3D
 layout: default
 ---
 
+Pour un tutoriel d'introduction plus complet, [lisez celui que j'ai écrit sur Pixelnest](http://pixelnest.io/tutorials/2d-game-unity/).
+
 # Installation(s)
 
 [Télécharger](https://unity3d.com/fr/get-unity/download) et installer Unity3D. 
