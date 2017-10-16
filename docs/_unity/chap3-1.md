@@ -60,7 +60,7 @@ public SpriteRenderer greenSprite;
 ...
 
 SpriteRenderer r = GetComponent<SpriteRenderer>();
-r.color = redSprite;
+r.sprite = redSprite;
 ```
 
 ## Modifier la couleur d'un sprite
