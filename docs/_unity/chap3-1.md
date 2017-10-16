@@ -156,6 +156,23 @@ if(Input.touchCount >= 1)
 }
 ```
 
+### Tap à droite ou à gauche
+
+```csharp
+if(Input.touchCount >= 1)
+{
+    Vector3 p = Camera.main.ScreenToViewport(Input.touches[0]);
+    if(p.x < 0.5f) 
+    {
+       // Gauche
+    }
+    else 
+    {
+       // Droite
+    }
+}
+```
+
 ## Drag
 
 TODO
