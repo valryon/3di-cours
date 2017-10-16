@@ -15,6 +15,8 @@ Pour déployer son jeu sur Android, il faut installer plusieurs choses :
 
 5. Une fois le téléphone activé, il faut activer le "Debug par USB" dans les options Développeur.
 
+6. Dans Unity, aller dans `Edit->Preferences->External Tools` et saisir le lien vers la JDK et l'installation d'Android Studio.
+
 Il devrait ensuite être possible de déployer votre jeu sur votre *device.
 
 ## Remote
