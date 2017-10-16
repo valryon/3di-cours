@@ -8,8 +8,19 @@ layout: default
 Pack de scripts utiles pour faire des petits jeux à cette adresse :
 - [https://github.com/valryon/PlaygroundProject/](https://github.com/valryon/PlaygroundProject/releases/tag/0.1)
 
+## Mathématique
 
-## Obtenir un composant
+### Random
+
+```csharp
+// Chiffre entre 0 et 10 
+int n = Random.Range(0,10);
+float nombreAleatoire = Random.Range(0, 1.5f);
+```
+
+## Hiérarchie
+
+### Obtenir un composant
 
 ```csharp
 Rigidbody2D r = GetComponent<Rigidbody2D>();
@@ -19,9 +30,9 @@ SpriteRenderer c = GetComponent<SpriteRenderer>();
 
 Fonctionne également avec n'importe quel autre composant ou avec **vos scripts** !
 
-## Obtenir un objet
+### Obtenir un objet
 
-### Par son type
+#### Par son type
 
 ```csharp
 PlayerScript player = FindObjectOfType<PlayerScript>();
@@ -31,7 +42,7 @@ if(player != null)
 }
 ```
 
-### Par son nom
+#### Par son nom
 
 ```csharp
 GameObject o = GameObjet.Find("Nom dans la scène");
@@ -41,14 +52,14 @@ if(o != null)
 }
 ```
 
-## Déplacer un objet
+### Déplacer un objet
 
 ```csharp
 Vector3 movement = new Vector3(1f, 0.5f, 0f); //(x:1, y:0.5, z:0)
 transform.position += movement;
 ```
 
-### Avec la gravité/la physique
+#### Avec la gravité/la physique
 
 ```csharp
 Rigidbody2D r = GetComponent<Rigidbody2D>();
@@ -56,7 +67,23 @@ Vector3 movement = new Vector3(5f, 2.5f, 0f);
 r.velocity += movement;
 ```
 
-## Modifier un sprite
+
+### Détruire un objet
+
+```csharp
+Destroy(gameObject);
+```
+
+Détruire après N secondes
+
+```csharp
+Destroy(gameObject, 3f); // 3 secondes
+```
+
+
+## Modifications visuelles
+
+### Modifier un sprite
 
 ```csharp
 public SpriteRenderer redSprite;
@@ -69,21 +96,23 @@ SpriteRenderer r = GetComponent<SpriteRenderer>();
 r.sprite = redSprite;
 ```
 
-## Modifier la couleur d'un sprite
+### Modifier la couleur d'un sprite
 
 ```csharp
 SpriteRenderer r = GetComponent<SpriteRenderer>();
 r.color = Color.red;
 ```
 
-## Modifier la couleur d'un mesh
+### Modifier la couleur d'un mesh
 
 ```csharp
 Renderer mr = GetComponent<Renderer>();
 mr.material.color = Color.red;
 ```
 
-## Liste de GameObjects
+## Structure de données
+
+### Liste de GameObjects
 
 Ajouter comme variable à la classe :
 
@@ -101,27 +130,9 @@ GameObject elementAuPif = trucs[Random.Range(0, trucs.Count)];
 
 Remplacer `GameObject` par `SpriteRenderer`, `Vector3`, `Color`, etc, selon la liste définie !
 
-### Détruire un objet
+## Souris
 
-```csharp
-Destroy(gameObject);
-```
-
-Détruire après N secondes
-
-```csharp
-Destroy(gameObject, 3f); // 3 secondes
-```
-
-## Avoir un nombre aléatoire
-
-```csharp
-float nombreAleatoire = Random.Range(0, 42f);
-```
-
-# Souris
-
-## Position de la souris
+### Position de la souris
 
 A l'écran :
 
@@ -135,7 +146,7 @@ Dans le monde :
 Vector2 p = Camera.main.ScreenToWorldPosition(Input.mousePosition);
 ```
 
-## Clics (maintenu / à l'instant)
+### Clics (maintenu / à l'instant)
 
 ```csharp
 // Clic
@@ -143,7 +154,7 @@ bool click = Input.GetMouseButton(0);
 bool clicked = Input.GetMouseButtonDown(0);
 ```
 
-## Sélection d'un objet
+### Sélection d'un objet
 
 ```csharp
 // Toucher un collider **2D** sur le clic
@@ -164,9 +175,9 @@ if (Input.GetMouseButtonDown(0))
 }
 ```
 
-# Tactile
+## Tactile
 
-## Tap
+### Tap
 
 ```csharp
 if(Input.touchCount >= 1)
@@ -192,11 +203,11 @@ if(Input.touchCount >= 1)
 }
 ```
 
-## Drag
+### Drag
 
 TODO
 
-## Position d'un doigt
+### Position d'un doigt
 
 ```csharp
 if(Input.touchCount >= 1)
@@ -206,6 +217,6 @@ if(Input.touchCount >= 1)
 }
 ```
 
-# Coroutines
+## Coroutines
 
 TODO
