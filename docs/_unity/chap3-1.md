@@ -50,6 +50,19 @@ Vector3 movement = new Vector3(5f, 2.5f, 0f);
 r.velocity += movement;
 ```
 
+## Modifier un sprite
+
+```csharp
+public SpriteRenderer redSprite;
+public SpriteRenderer blueSprite;
+public SpriteRenderer greenSprite;
+
+...
+
+SpriteRenderer r = GetComponent<SpriteRenderer>();
+r.color = redSprite;
+```
+
 ## Modifier la couleur d'un sprite
 
 ```csharp
