@@ -36,7 +36,7 @@ float v2 = Mathf.Min(1f, val); // 1f
 
 On contraint ici la valeur à être supérieure ou égale à 1f avec `Min`.
 
-### Clamp
+### Clamp (borne de valeurs)
 
 On peut aussi *clamper* une valeur entre deux bornes :
 
@@ -57,6 +57,16 @@ v = new Vector3(
     Mathf.Clamp(v.x, -1f, 1f),
     Mathf.Clamp(v.y, -1f, 1f)
 );
+```
+
+### Arrondis (Ceil/Floor)
+
+Arrondi a l'inférieur (*Floor*) ou supérieur (*Ceil*).
+
+```csharp
+float val = 4.2f;
+float v1 = Mathf.Floor(val); // 4f
+float v2 = Mathf.Ceil(val); // 5f
 ```
 
 ### Vitesse relative à la distance
