@@ -18,6 +18,66 @@ int n = Random.Range(0,10);
 float nombreAleatoire = Random.Range(0, 1.5f);
 ```
 
+### Min/Max
+
+Récupérer une valeur maximale ou minimale entre deux.
+
+```csharp
+float valMax = Mathf.Max(1f, 10f); // 10
+float valMin = Mathf.Min(1f, 10f); // 1
+```
+
+Cela permet de facilement contraindre une valeur :
+
+```csharp
+float val = 4.2f;
+float v2 = Mathf.Min(1f, val); // 1f
+```
+
+On contraint ici la valeur à être supérieure ou égale à 1f avec `Min`.
+
+### Clamp
+
+On peut aussi *clamper* une valeur entre deux bornes :
+
+```csharp
+float val = 4.2f;
+// Limiter entre [-4f, 4f]
+float v2 = Mathf.Clamp(val, -4f, 4f); // 4f
+```
+
+On peut appliquer cela à un vecteur
+
+```csharp
+Vector3 v = new Vector3();
+
+// ...
+
+v = new Vector3(
+    Mathf.Clamp(v.x, -1f, 1f),
+    Mathf.Clamp(v.y, -1f, 1f)
+);
+```
+
+### Vitesse relative à la distance
+
+Interpoler une vitesse selon la distance (ici entre un objet et la camera).
+(Aller vite si loin, aller lentement si proche)
+
+```csharp
+float vitesseMax = 2f;
+float vitesseMin = 0.5f;
+float distanceMax = 10; // Distance à partir de laquelle c'est vitesse max
+
+float distance = Mathf.Abs(Camera.main.transform.x - objet.transform.position.x);
+
+// Convertir cette distance en pourcentage avec la distance max
+float p = distance / distanceMax;
+p = Mathf.Min(1f, p); // Ne pas dépasser 1
+
+float vitesseActuelle = vitesseMin + ((vitesseMax - vitesseMin) * p);
+```
+
 ## Hiérarchie
 
 ### Obtenir un composant
@@ -59,15 +119,6 @@ Vector3 movement = new Vector3(1f, 0.5f, 0f); //(x:1, y:0.5, z:0)
 transform.position += movement;
 ```
 
-#### Avec la gravité/la physique
-
-```csharp
-Rigidbody2D r = GetComponent<Rigidbody2D>();
-Vector3 movement = new Vector3(5f, 2.5f, 0f);
-r.velocity += movement;
-```
-
-
 ### Détruire un objet
 
 ```csharp
@@ -80,6 +131,39 @@ Détruire après N secondes
 Destroy(gameObject, 3f); // 3 secondes
 ```
 
+## Physique
+
+
+
+#### Déplacer un objet qui dépend de la physique
+
+Légèrement différent de modifier directement le `transform.position` : on permet au moteur physique d'anticiper l'action et on évite qu'un ibjet en traverse un autre.
+
+```csharp
+Rigidbody2D r = GetComponent<Rigidbody2D>();
+Vector3 movement = new Vector3(5f, 2.5f, 0f);
+r.position += movement;
+```
+
+#### Déplacer un objet avec la gravité/la physique
+
+On applique une force à la vélocité actuelle. Un objet qui tombe va progressivement remonter par exemple.
+
+```csharp
+Rigidbody2D r = GetComponent<Rigidbody2D>();
+Vector3 movement = new Vector3(5f, 2.5f, 0f);
+r.velocity += movement;
+```
+
+#### Limiter la vitesse d'un objet
+
+```csharp
+Rigidbody2D r = GetComponent<Rigidbody2D>();
+r.velocity = new Vector3(
+    Mathf.Clamp(r.velocity.x, -5f, 5f), // Vitesse entre -5 et 5
+    Mathf.Clamp(r.velocity.y, -5f, 5f) // Idem mais peut être différente
+);
+```
 
 ## Modifications visuelles
 
