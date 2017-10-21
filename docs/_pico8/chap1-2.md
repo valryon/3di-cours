@@ -14,8 +14,8 @@ Très rapidement, il est utile de modifier ce comportement :
 
 On peut indiquer qu'un bloc de code ne doit être exécuté que si une condition est remplie grâce à `if`. `if` teste la condition et si elle est satifasfaite (`true`), le code est exécuté.
 
-En Lua, la condition est suivie de `THEN` et le bloc de code se termine par `END`.
-
+En Lua, la condition est suivie de `THEN` et le bloc de code se termine par `END`
+.
 Exemples :
 
 ```lua
@@ -26,7 +26,7 @@ END
 -- N'affiche rien
 ```
 
-Ce bout de code n'affiche rien, car on regarde si `vies` vaut 0, mais il vaut 1.
+Ce bout de code n'affiche rien, car on regarde si `vies` vaut 0, mais il vaut 1. Le test de condition n'étant pas vrai, la séquence d'éxécution saute donc de IF à END sans passer par le PRINT.
 
 En complément du `if` (**si**) vient le `else` (**sinon**) qui permet de définir un bloc de code à exécuter si la condition est fausse (`false`).
 
@@ -159,9 +159,43 @@ Il est souvent utile de répéter du code. Cela peut par exemple permettre de cr
 
 A chaque fois que la boucle répète le code, on parle **d'itération**.
 
+#### while
+
+Une boucle très utile est `while`. Littéralement "répéter tant que".
+
+Syntaxe :
+
+```lua
+WHILE (condition) DO
+  -- Code à répéter
+END
+```
+
+La différence c'est qu'ici le nombre d'itérations n'est pas **connu**. Et il est potentiellement **infini**.
+
+D'ailleurs, un jeu vidéo est une grande boucle `WHILE(jeu_lancé)` !
+
+La **condition** est identique à ce que l'on peut mettre dans un `if`.
+
+Exemple : reproduire une boucle for
+
+```lua
+i=0
+WHILE(i<=10) DO
+	PRINT(i)
+	i=i+1
+END
+```
+
+Attention aux boucles infinis... si la condition n'est jamais remplie, votre programme restera bloqué pour **toujours** dans la boucle.
+`ESC` sur PICO-8 vous permet de l'arrêter brutalement, mais pour d'autres programmes (faits en C# par ex) seul un CTRL+ALT+SUPPR pourra l'en sortir en le quittant brutalement.
+
+(Mais ça n'est pas grave, ça fait partie du métier !)
+
+
 ### for
 
-La boucle de base est la boucle `for` :
+L'autre boucle de base est la boucle `for` :
 
 - Elle répète un nombre de fois précis le code
 - On sait à tout moment à quelle itération on est rendu
@@ -260,39 +294,6 @@ FUNCTION _DRAW()
 	END
 END
 ```
-
-#### while
-
-L'autre boucle très utile est `while`. Littéralement "répéter tant que".
-
-Syntaxe :
-
-```lua
-WHILE (condition) DO
-  -- Code à répéter
-END
-```
-
-La différence c'est qu'ici le nombre d'itérations n'est pas **connu**. Et il est potentiellement **infini**.
-
-D'ailleurs, un jeu vidéo est une grande boucle `WHILE(jeu_lancé)` !
-
-La **condition** est identique à ce que l'on peut mettre dans un `if`.
-
-Exemple : reproduire une boucle for
-
-```lua
-i=0
-WHILE(i<=10) DO
-	PRINT(i)
-	i=i+1
-END
-```
-
-Attention aux boucles infinis... si la condition n'est jamais remplie, votre programme restera bloqué pour **toujours** dans la boucle.
-`ESC` sur PICO-8 vous permet de l'arrêter brutalement, mais pour d'autres programmes (faits en C# par ex) seul un CTRL+ALT+SUPPR pourra l'en sortir en le quittant brutalement.
-
-(Mais ça n'est pas grave, ça fait partie du métier !)
 
 ## Aparté : la boucle de jeu
 
