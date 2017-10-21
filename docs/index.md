@@ -11,6 +11,12 @@ Année : 2017-2018
 1. [Qui suis-je ?](http://dmayance.com)
 2. [Logique de code avec PICO-8](./pico8)
 3. [Programmation C# comme les vrais](./csharp)
-4. Unity3D
-5. Scripting C# dans Unity 3D
-6. Scripting C# dans Unreal Engine
+4. [Unity3D](./unity)
+
+À venir :
+
+5. Scripting C# dans Unreal Engine
+
+## Remerciements
+
+Merci à [Laurent Victorino](monkeymoon.net) pour son aide et ses conseils précieux sur ce cours.
