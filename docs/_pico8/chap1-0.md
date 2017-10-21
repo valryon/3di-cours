@@ -37,6 +37,7 @@ Quelques liens bien utiles :
 - [PICO-8 cheat sheet](https://neko250.github.io/pico8-api/)
 - [PICO-8 awesome resources](https://github.com/felipebueno/awesome-PICO-8)
 - [PICO-8 tutorial video series](https://www.youtube.com/watch?v=ZuaLuMhwcc8)
+- [PICO-8 tutorial blog fr](https://creationdejeuxvideo.com/category/pico-8/)
 
 ## Démarrage
 
@@ -56,6 +57,8 @@ Quelques commandes :
 | `LOAD`| permet de charger un fichier |
 | `RUN`| permet de lancer le jeu chargé |
 | `CLS`| nettoie l'écran |
+| `SAVE` | sauvegarde le projet en cours |
+| `FOLDER` | ouvre l'explorateur de fichier du système | 
 
 ## GIF
 
