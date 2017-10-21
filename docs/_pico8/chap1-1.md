@@ -33,7 +33,7 @@ WORLD
 
 ### Syntaxe
 
-C'est le langage **Lua** qui est utilisé dans PICO-8 dans une forme simplifié. En effet, l'éditeur ne propose qu'une partie des fonctionnalités du langage et le code est écrit en majuscule, *à l'ancienne*.
+C'est le langage **Lua** qui est utilisé dans PICO-8 dans une forme simplifié. En effet, l'éditeur ne propose qu'une partie des fonctionnalités du langage et le code est écrit en majuscule<sup>[1](#upper)</sup>, *à l'ancienne*.
 
 Comme dans tous les langages de programmation, on retrouve :
 
@@ -53,7 +53,7 @@ PRINT("HELLO")
 PRINT("WORLD")
 ```
 
-Si la syntaxe contient des erreurs, le programme vous les signalera au lancement.
+Si la syntaxe contient des erreurs, le programme vous les signalera a l'éxécution.
 
 D'autres langages, comme le C#, ont une étape intermédiaire de **compilation** pour traduire le code écrit en langage machine. Cela permet de détecter les erreurs plus tôt.
 
@@ -118,7 +118,7 @@ En Lua, les types sont assez simples. On ne fait pas exemple pas la différence 
 
 Une variable qui n'est pas utilisée n'a pas d'intérêt. Pour l'utiliser, il faut la nommer (`pseudo`, `x`, etc).
 Le nom permet au programmeur de savoir à quoi elle sert.
-Le point bonne pratique : même si on peut nommer toutes ses variables `a` `b` `c` `d`, on essayera en pratique de leur donner une signification claire rien qu'avec le nommage (comme dans l'exemple).
+Le point bonne pratique : même si on peut nommer toutes ses variables `a` `b` `c` `d`, on essayera en pratique de leur donner une signification claire rien qu'avec le nommage (comme dans l'exemple). Si on reprend l'analogie de la variable étant une boîte, lorsque vous rangez vos affaire il est plus pratique et confortable si la boîte qui contient vos ustensiles de cuisines ait le mot "cuisine" ecrit dessus.
 
 3. une **valeur**
 
@@ -157,8 +157,9 @@ PRINT(x) -- 42
 x = x + 5
 PRINT(x) -- 47
 ```
+A noter qu'il est possible de lire et modifier le contenu d'une variable. Mais uniquement son contenu peu changer. Le nom de la variable lui ne pourra pas etre modifié après sa création.
 
-Les opérations mathématiques sont permis et mêmes encouragées :
+Les opérations mathématiques sont permises et mêmes encouragées :
 
 | Opérateur | Nom | Exemple |
 |----|----|----|
@@ -212,3 +213,4 @@ PRINT("mais on est encore loin",x,y)
 y=y+8
 PRINT("de l'heure du repas !",x,y)
 ```
+<a name="upper">1</a>: que le code soit rédigé en majuscule ou minuscule il apparaitra en majuscules dans PICO.
