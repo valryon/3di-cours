@@ -157,7 +157,7 @@ PRINT(x) -- 42
 x = x + 5
 PRINT(x) -- 47
 ```
-A noter qu'il est possible de lire et modifier le contenu d'une variable. Mais uniquement son contenu peu changer. Le nom de la variable lui ne pourra pas etre modifié après sa création.
+A noter qu'il est possible de lire et de modifier le contenu d'une variable sur la même ligne. Mais uniquement son **contenu** peut changer : son nom ne pourra pas etre modifié après sa création.
 
 Les opérations mathématiques sont permises et mêmes encouragées :
 
