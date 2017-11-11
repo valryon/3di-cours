@@ -283,12 +283,12 @@ if(Input.touchCount >= 1)
 }
 ```
 
-### Tap à droite ou à gauche
+### Appui à droite ou à gauche
 
 ```csharp
 if(Input.touchCount >= 1)
 {
-    Vector3 p = Camera.main.ScreenToViewport(Input.touches[0]);
+    Vector3 p = Camera.main.ScreenToViewport(Input.touches[0].position);
     if(p.x < 0.5f)
     {
        // Gauche
@@ -296,6 +296,29 @@ if(Input.touchCount >= 1)
     else
     {
        // Droite
+    }
+}
+```
+
+### Tap à droite ou à gauche
+
+Le tap est un "clic" tactile, très court.
+
+```csharp
+if(Input.touchCount >= 1)
+{
+    Touch t = Input.touches[0];
+    if(t.phase == TouchPhase.Began)
+    {
+        Vector3 p = Camera.main.ScreenToViewport(t.position);
+        if(p.x < 0.5f)
+        {
+           // Gauche
+        }
+        else
+        {
+           // Droite
+        }
     }
 }
 ```
