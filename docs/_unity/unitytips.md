@@ -11,6 +11,19 @@ layout: default
 Pack de scripts utiles pour faire des petits jeux à cette adresse :
 - [https://github.com/valryon/PlaygroundProject/](https://github.com/valryon/PlaygroundProject/releases/tag/0.1)
 
+## Temps
+
+### Ralentir/Stopper le temps
+
+```csharp
+Time.timeScale = 0.5f; // 50%
+Time.timeScale = 0f; // Stop
+```
+
+Le temps `Time.deltaTime` sera alors modifié par ce facteur.
+
+Pour avoir un temps non multiplié, il existe `Time.unscaledDeltaTime`.
+
 ## Mathématique
 
 ### Random
@@ -469,4 +482,81 @@ public AnimationCurve courbe; // Définir une courbe éditable dans Unity
 // Exemple d'utilisation
 // Penser à remplir le chambe "courbe" dans l'inspecteur !!!
 StartCoroutine(Interpolate(transform.position, transform.position+new Vector3(5,0,0), 1f), courbe);
+```
+
+## Camera
+
+### ScreenShake
+
+The art of screenshake!
+
+```csharp
+using UnityEngine;
+/// <summary>
+/// Shake shake shake the screen!
+/// </summary>
+public class CameraShaker : MonoBehaviour
+{
+    #region Members
+
+    private static CameraShaker instance;
+    private Transform camTransform;
+    private float shakeDuration = 0f;
+    private float shakeAmount = 0.7f;
+    private float decreaseFactor = 1.0f;
+    private Vector3 originalPos;
+
+    #endregion
+
+    #region Timeline
+
+    void Awake()
+    {
+        if (instance != null) Destroy(instance);
+        instance = this;
+        camTransform = GetComponent(typeof(Transform)) as Transform;
+    }
+    void OnEnable()
+    {
+        originalPos = camTransform.localPosition;
+    }
+    void Update()
+    {
+        if (shakeDuration > 0)
+        {
+            // Little move of the camera position
+            camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+            // Decrease move intensity with time
+            shakeDuration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            camTransform.localPosition = originalPos;
+        }
+    }
+    #endregion
+
+    #region Public methods
+
+    public static void Shake(float duration, float force, float decreaseFactor = 1f)
+    {
+        if (instance == null)
+        {
+            instance = Camera.main.gameObject.AddComponent<CameraShaker>();
+        }
+        instance.shakeDuration = duration;
+        instance.shakeAmount = force;
+        instance.decreaseFactor = decreaseFactor;
+    }
+
+    #endregion
+}
+```
+
+Usage
+
+```csharp
+// Durée, force, amenuisement
+CameraShaker.Shake(0.25f, 0.25f, 2f);
 ```

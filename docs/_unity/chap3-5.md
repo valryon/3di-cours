@@ -85,6 +85,7 @@ using UnityEditor;
       // Affichge de widgets
     }
 }
+#endif
 ```
 
 ## Widgets disponibles
@@ -134,5 +135,6 @@ public class MyScriptEditor : Editor
         }
     }
 }
+#endif
 ```
 
