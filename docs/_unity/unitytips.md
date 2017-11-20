@@ -24,6 +24,18 @@ Le temps `Time.deltaTime` sera alors modifié par ce facteur.
 
 Pour avoir un temps non multiplié, il existe `Time.unscaledDeltaTime`.
 
+
+## Scènes
+
+### Changement de scène
+
+```csharp
+UnityEngine.SceneManagement.SceneManager.LoadScene("MaScene");
+```
+
+où `MaScene` est la scène enregistrée et présente dans les `Build Settings`.
+
+
 ## Mathématique
 
 ### Random
