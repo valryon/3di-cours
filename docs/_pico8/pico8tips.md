@@ -62,6 +62,38 @@ SPR(001,64,64,1,1,true,true)
 
 Note : il s'agit des derniers paramètres de la fonction et il faut donc préciser les paramètres avant (notamment la taille) pour pouvoir y accéder.
 
+### Menu
+
+Il n'y a pas de mécanisme intégré directement à Pico8 pour faire des menus (système de scènes pas exemple).
+
+Donc le plus simple est de faire une petite machine à deux 2 états :
+
+```lua
+state=0 -- starts with Menu
+
+
+function _update()
+    if state==0 then
+        updateMenu()
+    else
+        updateGame()
+    end
+end
+
+function updateMenu()
+    -- ...
+    -- Change state to go to game
+    if btnp(4) then
+        state=1
+    end
+end
+
+function updateGame()
+    -- ...
+end
+
+```
+
 ## Math
 
 ### -1 ou 1 aléatoirement
