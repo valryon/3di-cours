@@ -10,6 +10,33 @@ layout: default
 
 Toutes les fonctions de Pico-8: [https://neko250.github.io/pico8-api/](https://neko250.github.io/pico8-api/)
 
+## Affichage
+
+Afficher des sprites plus grands que 8x8 : l'éditeur permet de dessiner selon 4 tailles (8x8, 16x6, 32x32, 64x64).
+
+Dans la fonction `SPR` vous pouvez indiquer la taille du sprite à afficher (par défaut elle sera 8x8).
+
+Attention : on ne passe pas la taille en pixels mais une taille entre 1 et 4.
+
+```lua
+
+-- Petit sprite (8x8)
+SPR(001,64,64)
+
+-- Equivalent à
+SPR(001,64,64,1)
+
+-- 16x16
+SPR(001,64,64,2)
+
+-- 32x32
+SPR(001,64,64,3)
+
+-- 64x64
+SPR(001,64,64,4)
+
+```
+
 ## Math
 
 ### -1 ou 1 aléatoirement
