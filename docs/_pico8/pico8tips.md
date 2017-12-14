@@ -12,6 +12,8 @@ Toutes les fonctions de Pico-8: [https://neko250.github.io/pico8-api/](https://n
 
 ## Affichage
 
+### Sprites plus grands que 8x8
+
 Afficher des sprites plus grands que 8x8 : l'éditeur permet de dessiner selon 4 tailles (8x8, 16x6, 32x32, 64x64).
 
 Dans la fonction `SPR` vous pouvez indiquer la taille du sprite à afficher (par défaut elle sera 8x8).
@@ -24,18 +26,41 @@ Attention : on ne passe pas la taille en pixels mais une taille entre 1 et 4.
 SPR(001,64,64)
 
 -- Equivalent à
-SPR(001,64,64,1)
+SPR(001,64,64,1,1)
 
 -- 16x16
-SPR(001,64,64,2)
+SPR(001,64,64,2,2)
 
 -- 32x32
-SPR(001,64,64,3)
+SPR(001,64,64,3,3)
 
 -- 64x64
-SPR(001,64,64,4)
+SPR(001,64,64,4,4)
 
 ```
+
+L'autre astuce est de faire plusieurs sprites de 8x8 et de composer à l'affichage un gros sprites à partir de plusieurs petits. L'intérêt est de faire des symétries (*flip*) pour réutiliser les sprites et gagner de la place dans la cartouche.
+
+### Symétrie
+
+On peut préciser à `SPR` si l'on souhaite une symétrie verticale (flip x) ou horizontale (flip y :)
+
+```lua
+-- Pas de symétrie
+SPR(001,64,64,1,1,false,false)
+
+-- Vertical (flip x)
+SPR(001,64,64,1,1,true,false)
+
+-- Horizontal (flip y)
+SPR(001,64,64,1,1,false,true)
+
+-- flip x et y
+SPR(001,64,64,1,1,true,true)
+
+```
+
+Note : il s'agit des derniers paramètres de la fonction et il faut donc préciser les paramètres avant (notamment la taille) pour pouvoir y accéder.
 
 ## Math
 
