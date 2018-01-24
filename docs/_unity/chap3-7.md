@@ -5,7 +5,9 @@ layout: default
 
 ## Installation et téléchargements
 
-- Windows 10 avec Fall Creators Update 2017
+### Windows Mixed Reality portal
+
+- Windows 10 avec [Fall Creators Update 2017]( https://support.microsoft.com/en-us/help/4045820)
 - Activer le `Mode Développeur` dans Windows->Panneau de contrôle->Pour les développeurs
 
 (Si Windows Update est bloqué / plante)
@@ -15,11 +17,15 @@ layout: default
         - `dism /online /add-package /packagepath:"path to the cab file"`
     - [KB4054517](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4054517)
 
-- Visual Studio 2017 avec les modules UWP (Universal Windows Platform) et Unity.
+Le portail et le casque devrait fonctionner.
+
+### Environnement de développement
+
+- [Visual Studio 2017](https://www.visualstudio.com/fr/vs/community/) avec les modules pour UWP (Universal Windows Platform) et pour Unity.
 
 - [SDK UWP](https://developer.microsoft.com/fr-fr/windows/downloads/windows-10-sdk) (Ne cocher que ce qui concerne UWP)
 
-- Unity 2017.3+
+- [Unity 2017.3+](https://unity3d.com/fr/get-unity/update)
 
 ## Création d'un projet Unity
 
