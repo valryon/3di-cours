@@ -19,17 +19,14 @@ layout: default
 
 Le portail et le casque devrait fonctionner.
 
-### Environnement de développement
-
-- [Visual Studio 2017](https://www.visualstudio.com/fr/vs/community/) avec les modules pour UWP (Universal Windows Platform) et pour Unity.
-
-- [SDK UWP](https://developer.microsoft.com/fr-fr/windows/downloads/windows-10-sdk) (Ne cocher que ce qui concerne UWP)
-
 - [Unity 2017.3+](https://unity3d.com/fr/get-unity/update)
+
+- Plugin [Steam VR](https://assetstore.unity.com/packages/templates/systems/steamvr-plugin-32647)
+  (Pas obligatoire, mais plus simple et compatible avec plusieurs casques)
 
 ## Création d'un projet Unity
 
 - 2017.3.0 min
-- UWP SDK
-- UWP type
-- XR
+- Activer `Virtual Reality` dans l'onglet XR des PlayerSettings
+
+![XR settings]({{site.url}}/static/content/unity/xr.png)
