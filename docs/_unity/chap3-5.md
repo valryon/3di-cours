@@ -10,7 +10,9 @@ Deux possibilités :
 - La **fenêtre éditeur personnalisée**. Elle peut contenir et absolument tout ce qu'il est possible de faire dans le jeu et dans Unity. Quelques exemples : spawns de mobs, soin du joueur, changer d'arme, changer de niveaux, etc.
 
 ![Steredenn 1]({{site.url}}/static/content/unity/customeditor1.png)
-![Steredenn 2]({{site.url}}/static/content/unity/customeditor2.png)
+![Steredenn 2]({{site.url}}
+/static/content/unity/customeditor2.png)
+![LV ;)]({{site.url}}/static/content/unity/customeditor5.png)
 
 - L'**inspecteur personnalisé**. L'inspecteur est lié à un composant ou à un *ScriptableObject*. Il permet de remplacer ou d'ajouter à la suite de l'inspecteur de base des boutons, des champs, des informations.
 
