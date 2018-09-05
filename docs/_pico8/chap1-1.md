@@ -13,7 +13,7 @@ D'abord, quelques bases.
 
 Le code est écrit **ligne par ligne**.
 
-Ces lignes de code sont transformées en **instructions** compréhensibles par l'ordinateur, elles aussi executées les unes après les autres, de manière **séquentielles**.
+Ces lignes de code sont transformées en **instructions** compréhensibles par l'ordinateur, elles aussi executées les unes après les autres, de manière **séquentielle**.
 
 Ainsi, écrire
 
