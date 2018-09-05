@@ -57,7 +57,7 @@ Si la syntaxe contient des erreurs, le programme vous les signalera a l'éxécut
 
 D'autres langages, comme le C#, ont une étape intermédiaire de **compilation** pour traduire le code écrit en langage machine. Cela permet de détecter les erreurs plus tôt.
 
-Mais le Lua dans PICO-8 n'a pas cette option, le programme lit les lignes au fur et à mesure, on dit qu'il les **inteprète**.
+Mais le Lua dans PICO-8 n'a pas cette option, le programme lit les lignes au fur et à mesure, on dit qu'il les **interprète**.
 
 ### Exercice
 
@@ -70,7 +70,7 @@ Mais le Lua dans PICO-8 n'a pas cette option, le programme lit les lignes au fur
 ```lua
 PRINT("ici")
 PRINT("ou là ?", 50,100)
-PRINT("c'est quand même super, 20,30, 8)
+PRINT("c'est quand même super", 20,30, 8)
 ```
 
 # Les variables
@@ -97,7 +97,7 @@ wpn=0           -- Une variable pour l'arme utilisée
 
 Une **variable** a toujours :
 
-1. un **type**
+1/ un **type**
 
 On doit indiquer à l'ordinateur si on stocke un nombre, un texte ou tout autre chose. Car au final, l'ordinateur stocke du binaire et quelque chose comme `01011001` peut signifier des choses très différentes selon le type.
 
@@ -114,13 +114,13 @@ En Lua, les types sont assez simples. On ne fait pas exemple pas la différence 
 | **string** | chaîne de caractère | `"damien"`, `"I:0145"`, `"Je suis un texte."` |
 | **table** | tableau/liste | `{"pizza", "burger", "raclette"}` |
 
-2. un **nom**
+2/ un **nom**
 
 Une variable qui n'est pas utilisée n'a pas d'intérêt. Pour l'utiliser, il faut la nommer (`pseudo`, `x`, etc).
 Le nom permet au programmeur de savoir à quoi elle sert.
 Le point bonne pratique : même si on peut nommer toutes ses variables `a` `b` `c` `d`, on essayera en pratique de leur donner une signification claire rien qu'avec le nommage (comme dans l'exemple). Si on reprend l'analogie de la variable étant une boîte, lorsque vous rangez vos affaire il est plus pratique et confortable si la boîte qui contient vos ustensiles de cuisines ait le mot "cuisine" ecrit dessus.
 
-3. une **valeur**
+3/ une **valeur**
 
 Une variable a toujours une valeur. En Lua, la valeur par défaut est `NIL`.
 Sinon, la variable aura la dernière valeur qu'on lui a donné.
@@ -136,20 +136,20 @@ alors `x` aura comme valeur `42`. Le `0` est définitivement perdu.
 
 ### Opération sur une variable
 
-1. La **déclaration** permet d'initialiser la variable.
+1/ La **déclaration** permet d'initialiser la variable.
 
 ```lua
 x=42
 ```
 
-2. On peut ensuite **lire** sa valeur
+2/ On peut ensuite **lire** sa valeur
 
 ```lua
 PRINT(x)
 y=x+5
 ```
 
-3. Et surtout on peut **écrire** et changer sa valeur. On parle alors d'**affectation** :
+3/ Et surtout on peut **écrire** et changer sa valeur. On parle alors d'**affectation** :
 
 ```lua
 x=42
