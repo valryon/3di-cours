@@ -308,6 +308,18 @@ if(Input.touchCount >= 1)
 }
 ```
 
+### Double tap (ou plus)
+
+```csharp
+if(Input.touchCount >= 1)
+{
+   if(Input.touches[0].tapCount == 2)
+   {
+    // Multi taps
+   }
+}
+```
+
 ### Appui à droite ou à gauche
 
 ```csharp
@@ -335,7 +347,7 @@ if(Input.touchCount >= 1)
     Touch t = Input.touches[0];
     if(t.phase == TouchPhase.Began)
     {
-        Vector3 p = Camera.main.ScreenToViewport(t.position);
+        Vector3 p = Camera.main.ScreenToViewportPoint(t.position);
         if(p.x < 0.5f)
         {
            // Gauche
