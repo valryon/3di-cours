@@ -510,6 +510,13 @@ StartCoroutine(Interpolate(transform.position, transform.position+new Vector3(5,
 
 ## Camera
 
+### Rotation d'un vecteur selon la caméra
+
+```csharp
+Vector3 f = new Vector3(0, 0, 200);
+f = Camera.main.transform.TransformDirection(f);
+```
+
 ### ScreenShake
 
 The art of screenshake!
