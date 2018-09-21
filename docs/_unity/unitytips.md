@@ -25,6 +25,23 @@ Le temps `Time.deltaTime` sera alors modifié par ce facteur.
 Pour avoir un temps non multiplié, il existe `Time.unscaledDeltaTime`.
 
 
+### Timer simple
+
+```csharp
+
+private float timer = 3f; // Délai avant premier "tick"
+
+void Update()
+{
+   timer -= Time.deltaTime;
+   if(timer <= 0)
+   {
+      timer = 3f; // Boucle
+      // TODO faire quelque chose ici
+   }
+}
+```
+
 ## Scènes
 
 ### Changement de scène
