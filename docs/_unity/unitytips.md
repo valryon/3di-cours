@@ -42,6 +42,26 @@ void Update()
 }
 ```
 
+## Mouvements
+
+### Vers un point donné
+
+```csharp
+private Vector3 targetPosition;
+
+void Start()
+{
+    targetPosition = transform.position;
+}
+
+void Update()
+{
+    // Interpole vers la position donnée
+    transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 2f); // 2f est une valeur au pif. Plus c'est gros plus ça va vite
+}
+```
+
+
 ## Scènes
 
 ### Changement de scène
