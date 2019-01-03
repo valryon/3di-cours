@@ -541,7 +541,7 @@ public AnimationCurve courbe; // Définir une courbe éditable dans Unity
 // ...
 
 // Exemple d'utilisation
-// Penser à remplir le chambe "courbe" dans l'inspecteur !!!
+// Penser à remplir le champ "courbe" dans l'inspecteur !!!
 StartCoroutine(Interpolate(transform.position, transform.position+new Vector3(5,0,0), 1f), courbe);
 ```
 
